@@ -1,0 +1,1 @@
+{"workers":{"pdf-preview":"workers/pdf-preview.mjs"},"patches":[{"path":"node_modules/pdfjs-dist/build/pdf.mjs","sha256":"a209a2124baa35cbb9015b809926f1bcec9dd1c247296290e205dd9d76cb9128","find":"const worker = await import(/*webpackIgnore: true*/this.workerSrc);","replace":"throw new Error('PDF preview worker unavailable'); const worker = null;"}]}
