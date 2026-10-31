@@ -9,3 +9,8 @@ the current one stays available. Selectable PDF text is layered over the page. F
 Run `npm ci --prefix apps/system/pdf-viewer --ignore-scripts` before building.
 
 PDF.js handles rendering and text extraction in the browser. Large documents may take time to search; changing the query or document cancels the old search. The window releases its render and text-layer tasks and worker when closed.
+
+If multiple open or reload requests overlap, a later choice takes precedence;
+cancelling the picker keeps the current page. Local desktop, emulated-phone and
+4K-sized tests and a live emulated-phone test delay mocked picker results to
+check ordering. A separate live emulated-phone test exercises the actual picker.
