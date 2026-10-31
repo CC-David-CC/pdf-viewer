@@ -5,7 +5,7 @@ mirror. It has page and zoom controls, loads only when opened, makes no external
 requests, and destroys its worker on close. It does not download files to the PC.
 Choose **Open from My files**, then use Previous, Next and the zoom controls.
 The page fits the window when its width changes. If another PDF cannot open,
-the current one stays available. Selectable PDF text is layered over the page. Find text searches the document locally and highlights the first match on each matching page; the next and previous controls move between matching pages. Search is a case-insensitive literal substring, without OCR or fuzzy matching, and scanned images without embedded text cannot be searched or selected. Annotations, forms and PDF editing are not currently supported.
+the current one stays available. Selectable PDF text is layered over the page. Find text searches the document locally and highlights each selected match; Find next and Find previous move between occurrences on a page and across pages, wrapping around the document. The status gives the selected match count on its page. Search is a case-insensitive literal substring, without OCR or fuzzy matching, and scanned images without embedded text cannot be searched or selected. Annotations, forms and PDF editing are not currently supported.
 Run `npm ci --prefix apps/system/pdf-viewer --ignore-scripts` before building.
 
 PDF.js handles rendering and text extraction in the browser. Large documents may take time to search; changing the query or document cancels the old search. The window releases its render and text-layer tasks and worker when closed.
