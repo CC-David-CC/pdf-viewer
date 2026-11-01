@@ -31,3 +31,12 @@ first page fits its display limit. An oversized first page leaves the prior
 document and navigation available. Later pages can still exceed the limit.
 
 A later page is checked before navigation changes the displayed page number. If it exceeds the display limit, the previous page stays visible and navigation remains available. Local desktop and emulated-phone tests and a live emulated-phone test cover an oversized later page. Other rendering failures and physical touch remain unverified.
+
+Pages are drawn offscreen before replacing the visible page. When a later page
+fails to render, the previous page and page number remain available. Opening a
+new PDF also renders its first page before replacing the current document;
+if that render fails, the current document remains open. If a search match cannot be rendered, the viewer reports that instead of claiming the match is visible. Local desktop and
+emulated-phone account tests inject canvas-render failures and verify recovery.
+Other render failures and physical touch remain unverified.
+
+If a window’s initial PDF is invalid or missing, the failed file reference is cleared and the viewer offers to open another file. The original file remains unchanged. Local desktop/phone and live phone-sized account tests cover invalid-file fallback, opening another PDF and refresh.
