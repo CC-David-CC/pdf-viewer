@@ -16,3 +16,4 @@
  .pdf-find-next::after{content:"↓"}
  .pdf-find-status:not(:empty){flex-basis:100%}
 }
+.pdf-password-form:not([hidden]){display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:8px;background:#fff3d1;color:#4d2900}.pdf-password-form input{min-height:40px;max-width:100%;box-sizing:border-box}.pdf-password-form button{min-height:44px;padding:5px 10px}.pdf-password-message{flex-basis:100%}

@@ -72,3 +72,13 @@ replacing the current PDF with a blank or incomplete canvas. Local registered
 account tests cover a phone-sized view, a 2560-pixel desktop, a 4K-sized
 memory-limited view, and preservation of the current PDF when opening an
 oversized page. Physical touch and actual monitor rendering remain unverified.
+
+Password-protected PDFs prompt for their document password inside the viewer.
+An incorrect password can be retried; cancel keeps any previously open PDF.
+The password is not intentionally saved with the account or sent to the server;
+PDF.js uses it in the browser to open the file, and the password field is cleared
+after each attempt or close. Reopening the file asks again. Local registered-account
+desktop and emulated-phone tests cover a 256-bit encrypted PDF, incorrect and
+correct passwords, cancellation, close during entry, unchanged server bytes and
+fresh-session reopening. Physical-device input and other PDF encryption types
+are unverified; document passwords cannot be recovered by the viewer.
