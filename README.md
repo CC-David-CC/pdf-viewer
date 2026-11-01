@@ -55,3 +55,12 @@ In narrow windows, Find uses full-size up/down arrow buttons for previous and ne
 
 Use **Fit width** to return to the page-width view after zooming. Its percentage
 is relative to that fitted view, not a physical or PDF actual-size percentage.
+
+Fit width uses the available page width on wide desktops instead of capping
+ordinary pages at twice their original PDF size. If fitting would exceed the
+viewer’s rendering memory limit, the button says **limited** and its accessible
+label explains why. Very large individual pages are still refused rather than
+replacing the current PDF with a blank or incomplete canvas. Local registered
+account tests cover a phone-sized view, a 2560-pixel desktop, a 4K-sized
+memory-limited view, and preservation of the current PDF when opening an
+oversized page. Physical touch and actual monitor rendering remain unverified.
