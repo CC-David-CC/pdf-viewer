@@ -15,6 +15,14 @@ Previous, Next and Go start at the top of the selected page and clear any earlie
 the selected match. Local tests cover rendered multi-page PDFs at desktop,
 emulated-phone and 4K sizes; physical touch has not been verified.
 
+After zooming and scrolling sideways, Previous, Next and Go start the new page
+at its top left. If rendering fails, the prior page retains its reading position.
+The reset also survives a resize while the page is rendering. Local registered-
+account desktop and emulated-phone tests cover zoomed navigation, an injected
+render failure, search, resize, server sync and fresh-session reopening. A
+resize was exercised during navigation, but arbitrary render timing and physical
+touch remain unverified.
+
 PDF.js handles rendering and text extraction in the browser. Large documents may take time to search; changing the query or document cancels the old search. The window releases its render and text-layer tasks and worker when closed.
 
 If multiple open or reload requests overlap, a later choice takes precedence;
