@@ -30,6 +30,4 @@ Before replacing the current document, the viewer checks that the new PDF’s
 first page fits its display limit. An oversized first page leaves the prior
 document and navigation available. Later pages can still exceed the limit.
 
-A new PDF’s first page is checked against the display limit before replacing
-the current document. Local desktop and emulated-phone tests cover an
-oversized first page; later render failures and physical touch remain unverified.
+A later page is checked before navigation changes the displayed page number. If it exceeds the display limit, the previous page stays visible and navigation remains available. Local desktop and emulated-phone tests and a live emulated-phone test cover an oversized later page. Other rendering failures and physical touch remain unverified.
