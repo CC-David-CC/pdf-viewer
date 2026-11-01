@@ -25,3 +25,11 @@ check ordering. A separate live emulated-phone test exercises the actual picker.
 File-change checks are ordered so a slower earlier check cannot clear a newer
 warning. Local desktop and emulated-phone account tests cover delayed metadata,
 changes, deletion and reload; physical touch remains unverified.
+
+Before replacing the current document, the viewer checks that the new PDF’s
+first page fits its display limit. An oversized first page leaves the prior
+document and navigation available. Later pages can still exceed the limit.
+
+A new PDF’s first page is checked against the display limit before replacing
+the current document. Local desktop and emulated-phone tests cover an
+oversized first page; later render failures and physical touch remain unverified.
