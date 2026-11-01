@@ -52,3 +52,6 @@ failure followed by both successful and invalid-file retries. Physical touch
 remains unverified.
 
 In narrow windows, Find uses full-size up/down arrow buttons for previous and next matches, keeping the search field on the same row. The buttons keep descriptive accessibility labels and tooltips. Desktop windows retain text labels.
+
+Use **Fit width** to return to the page-width view after zooming. Its percentage
+is relative to that fitted view, not a physical or PDF actual-size percentage.
