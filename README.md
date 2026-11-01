@@ -40,3 +40,7 @@ emulated-phone account tests inject canvas-render failures and verify recovery.
 Other render failures and physical touch remain unverified.
 
 If a window’s initial PDF is invalid or missing, the failed file reference is cleared and the viewer offers to open another file. The original file remains unchanged. Local desktop/phone and live phone-sized account tests cover invalid-file fallback, opening another PDF and refresh.
+
+If a restored PDF is temporarily unavailable, its saved reference remains in
+the window and Reload can retry it. A confirmed missing or invalid PDF clears
+the stale reference and leaves the file unchanged.
