@@ -4,3 +4,15 @@
 
 .pdf-file-notice:not(:empty){padding:6px;background:#fff3d1;color:#674700;line-height:1.35}
 .pdf-page-jump{display:flex;align-items:center;gap:5px}.pdf-page-jump input{box-sizing:border-box;width:5.5em;min-height:44px;padding:6px}.pdf-page-total{white-space:nowrap;font-size:14px}
+
+/* Keep search on one row in narrow desktop windows and phones, with full-size touch targets. */
+.pdf-viewer-content{container-type:inline-size}
+.pdf-find-status:empty{display:none}
+@container (max-width:500px){
+ .pdf-search input{min-width:0;flex:1 1 60px}
+ .pdf-search button{flex:0 0 44px;width:44px;font-size:0;padding:0}
+ .pdf-search button::after{font-size:20px;line-height:1}
+ .pdf-find-previous::after{content:"↑"}
+ .pdf-find-next::after{content:"↓"}
+ .pdf-find-status:not(:empty){flex-basis:100%}
+}
