@@ -44,3 +44,9 @@ If a window’s initial PDF is invalid or missing, the failed file reference is 
 If a restored PDF is temporarily unavailable, its saved reference remains in
 the window and Reload can retry it. A confirmed missing or invalid PDF clears
 the stale reference and leaves the file unchanged.
+
+If retry confirms the saved PDF is invalid or missing, the viewer clears the
+stale target and disables Reload; Open from My files can then select another
+file. Local desktop and emulated-phone account tests cover a temporary read
+failure followed by both successful and invalid-file retries. Physical touch
+remains unverified.
