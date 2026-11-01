@@ -82,3 +82,12 @@ desktop and emulated-phone tests cover a 256-bit encrypted PDF, incorrect and
 correct passwords, cancellation, close during entry, unchanged server bytes and
 fresh-session reopening. Physical-device input and other PDF encryption types
 are unverified; document passwords cannot be recovered by the viewer.
+
+Use **Rotate left** or **Rotate right** to turn the displayed PDF in quarter
+turns. The adjustment is view-only, applies as you move between pages, and is
+reset when a PDF is opened or reloaded; it does not rewrite or save the file.
+The viewer combines this adjustment with each page's built-in orientation.
+Local registered-account desktop and emulated-phone tests cover a PDF with
+mixed built-in page orientations, rotation, search and navigation, injected
+render-failure recovery, unchanged server bytes and fresh-session reopening.
+Physical touch and all PDF rotation/rendering combinations remain unverified.
