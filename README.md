@@ -11,6 +11,9 @@ Run `npm ci --prefix apps/system/pdf-viewer --ignore-scripts` before building.
 Use the page number field and **Go** to jump directly to a page in a long
 document. The viewer rejects numbers outside the document and keeps the current
 page open. Previous, Next and search update the displayed page number.
+Previous, Next and Go start at the top of the selected page; Find scrolls to
+the selected match. Local tests cover rendered multi-page PDFs at desktop,
+emulated-phone and 4K sizes; physical touch has not been verified.
 
 PDF.js handles rendering and text extraction in the browser. Large documents may take time to search; changing the query or document cancels the old search. The window releases its render and text-layer tasks and worker when closed.
 
