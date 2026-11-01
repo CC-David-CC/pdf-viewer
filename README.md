@@ -21,3 +21,7 @@ If multiple open or reload requests overlap, a later choice takes precedence;
 cancelling the picker keeps the current page. Local desktop, emulated-phone and
 4K-sized tests and a live emulated-phone test delay mocked picker results to
 check ordering. A separate live emulated-phone test exercises the actual picker.
+
+File-change checks are ordered so a slower earlier check cannot clear a newer
+warning. Local desktop and emulated-phone account tests cover delayed metadata,
+changes, deletion and reload; physical touch remains unverified.
