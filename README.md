@@ -95,3 +95,12 @@ Local registered-account desktop and emulated-phone tests cover a PDF with
 mixed built-in page orientations, rotation, search and navigation, injected
 render-failure recovery, unchanged server bytes and fresh-session reopening.
 Physical touch and all PDF rotation/rendering combinations remain unverified.
+
+## Browser commands
+
+An open PDF window exposes `inspect`, `read-page`, and `go-to-page` through the
+signed-in desktop's in-page command registry. Page numbers start at one.
+`read-page` returns at most 32,768 UTF-16 code units and indicates truncation;
+it extracts PDF text rather than running OCR, so image-only pages may return no
+text. Commands are scoped to the open window and stop when it closes or the
+account changes. They do not create a remote agent connection.
